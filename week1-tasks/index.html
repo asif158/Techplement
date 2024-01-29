@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+
+  <div class="portfolio-container">
+    <section class="home">
+      <img src="/assets/avatar.svg" alt="About">
+      <div class="home-text">
+        <h1>Asif Rahman</h1>
+        <p>
+          I have a passion for coding and am proficient in both Python and
+          Javascript. My field of Interests are developing Innovative web
+          technologies and products. I enjoy using Node.js for backend
+          development and working with modern JavaScript frameworks such as
+          ReactJS for building dynamic user interfaces.
+        </p>
+        <button onclick="scrollToSection('portfolio')">View Portfolio</button>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2 class="h2-skills">Skills & Interests</h2>
+      <div class="skills-list">
+        <div class="skill-category">
+          <span class="icon">👨‍💻</span>
+          <h3>Programming Languages</h3>
+          <p>Python, JavaScript (ES6+), C++, C</p>
+        </div>
+
+        <div class="skill-category">
+          <span class="icon">🌐</span>
+          <span class="icon">🎨</span>
+          <span class="icon">🚀</span>
+          <span class="icon">⚛️</span>
+          <h3>Web Technologies</h3>
+          <p>HTML5, CSS3, NodeJs, ExpressJs, ReactJS, EJS</p>
+        </div>
+
+        <div class="skill-category">
+          <span class="icon">🛢️</span>
+          <h3>DBs</h3>
+          <p>MongoDB, SQL</p>
+        </div>
+
+        <div class="skill-category">
+          <span class="icon">🐙</span>
+          <span class="icon">📄</span>
+          <h3>Tools and Platforms</h3>
+          <p>Git, GitHub, VSCode, Cyclic, Netlify</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2 class="h2-portfolio">Portfolio</h2>
+      <div class="projects">
+        <div class="project1">
+          <div class="project-image">
+            <img src="/assets/project1.jpg" alt="Project 1">
+          </div>
+          <div class="project-details">
+            <h3>CampRave</h3>
+            <p>
+              Composed a full-stack, user-friendly Web Application dedicated
+              to camping enthusiasts, facilitating users to review camping
+              destinations with 5 stars and access crowd-sourced ratings from
+              worldwide.
+            </p>
+            <p>
+              Technologies used: HTML5, CSS3, Bootstrap 5, EJS, NodeJS,
+              ExpressJS, MongoDB
+            </p>
+            <a href="https://github.com/asif158/CampRave">GitHub</a>
+            <a href="https://fantastic-handkerchief-worm.cyclic.app/">Live Link</a>
+          </div>
+        </div>
+        <div class="project2">
+          <div class="project-details">
+            <h3>Ask and Grow</h3>
+            <p>
+              Collaborated with a team of 6 developers to design a social
+              media platform where users could ask questions, post their
+              achievements, and connect.
+            </p>
+            <p>Technologies used: React, Node.js, etc.</p>
+            <a href="https://github.com/asif158/Project-XYZ">GitHub</a>
+            <a href="https://master--adorable-trifle-92330c.netlify.app/">
+              Live Link
+            </a>
+          </div>
+          <div class="project-image">
+            <img src="/assets/project1.jpg" alt="Project 2" />
+          </div>
+        </div>
+        <div class="project3">
+          <div class="project-image">
+            <img src="/assets/project1.jpg" alt="Project 3" />
+          </div>
+          <div class="project-details">
+            <h3>Hostel Manager</h3>
+            <p>
+              Designed a web portal with a team of developers to oversee the
+              management of more than 900 hostel students
+            </p>
+            <p>
+              Technologies used: ReactJS, Express, Node.js, MongoDB,
+              MaterialUI
+            </p>
+            <a href="https://github.com/asif158/hms">GitHub</a>
+            <a href="https://hms-five.vercel.app/">Live Link</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <img src="/assets/home-main.svg" alt="About">
+      <form onsubmit="handleFormSubmit(event)">
+        <h2 class="h2-contact">Contact Me</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="" onchange="handleChange(event)" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="" onchange="handleChange(event)" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" value="" onchange="handleChange(event)" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <div class="custom-modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
